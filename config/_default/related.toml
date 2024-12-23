@@ -1,12 +1,12 @@
-# Related contents configuration
-includeNewer = true
-threshold = 60
-toLower = false
+# 相关内容配置
+includeNewer = true  # 是否包含更新的内容，设置为 true 则会包括最新的相关内容
+threshold = 60  # 设置相关内容的阈值，单位可以是分钟或其他，具体取决于上下文
+toLower = false  # 是否将索引名称转换为小写，设置为 false 则保持原有大小写
 
-[[indices]]
-name = "tags"
-weight = 100
+[[indices]]  # 定义第一个索引
+name = "tags"  # 索引名称为 "tags"
+weight = 100  # 权重设置为 100，影响相关性排序
 
-[[indices]]
-name = "categories"
-weight = 200
+[[indices]]  # 定义第二个索引
+name = "categories"  # 索引名称为 "categories"
+weight = 200  # 权重设置为 200，影响相关性排序

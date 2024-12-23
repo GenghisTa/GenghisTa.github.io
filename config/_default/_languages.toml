@@ -1,32 +1,12 @@
-# Rename this file to languages.toml to enable multilingual support
+# 重命名此文件为 languages.toml 以启用多语言支持
 [en]
-languageName = "English"
-languagedirection = "ltr"
-title = "Example Site"
-weight = 1
-[zh]
-languageName = "中文"
-languagedirection = "ltr"
-title = "Example Site"
-weight = 1
+languageName = "English"  # 英语的名称
+languagedirection = "ltr"  # 语言方向为从左到右
+title = "Example Site"  # 网站标题为 "示例站点"
+weight = 1  # 权重设置为 1，影响语言选择的优先级
 
-languages:
-    en:
-        languageName: English
-        title: Example Site
-        weight: 1
-        params:
-            description: Example description
-    zh-cn:
-        languageName: 中文
-        title: 演示站点
-        weight: 2
-        params:
-            description: 演示说明
-    ar:
-        languageName: عربي
-        languagedirection: rtl
-        title: موقع تجريبي
-        weight: 3
-        params:
-            description: وصف تجريبي
+[zh]
+languageName = "中文"  # 中文的名称
+languagedirection = "ltr"  # 语言方向为从左到右
+title = "Example Site"  # 网站标题为 "示例站点"
+weight = 1  # 权重设置为 1，影响语言选择的优先级
