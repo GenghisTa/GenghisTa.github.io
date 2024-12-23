@@ -1,150 +1,152 @@
-# Pages placed under these sections will be shown on homepage and archive page.
-mainSections = ["post"]
-# Output page's full content in RSS.
-rssFullContent = true
-favicon = "/favicon.png"
+# 在这些部分下的页面将显示在主页和存档页面上。
+mainSections = ["post"]  # 指定主页和存档页面上显示的主要内容部分，这里设为 "post"
 
-[footer]
-since = 2020
-customText = ""
+# 输出页面的完整内容到 RSS 订阅。
+rssFullContent = true  # 设置为 true 时，RSS 中将包含页面的完整内容
 
-[dateFormat]
-published = "Jan 02, 2006"
-lastUpdated = "Jan 02, 2006 15:04 MST"
+favicon = "/favicon.png"  # 网站的 favicon 图标文件路径
 
-[sidebar]
-emoji = "🍥"
-subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+[footer]  # 页脚配置
+since = 2020  # 表示网站创建年份
+customText = ""  # 自定义的文本，可用于自定义页脚内容
 
-[sidebar.avatar]
-enabled = true
-local = true
-src = "img/avatar.png"
+[dateFormat]  # 日期格式配置
+published = "Jan 02, 2006"  # 发布日期格式
+lastUpdated = "Jan 02, 2006 15:04 MST"  # 最后更新时间格式
 
-[article]
-headingAnchor = false
-math = false
-readingTime = true
+[sidebar]  # 侧边栏配置
+emoji = "🐉"  # 侧边栏显示的表情
+subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."  # 侧边栏的副标题
 
-[article.license]
-enabled = true
-default = "Licensed under CC BY-NC-SA 4.0"
+[sidebar.avatar]  # 侧边栏头像配置
+enabled = true  # 是否启用头像
+local = true  # 是否使用本地头像
+src = "img/avatar.png"  # 头像图片的路径
 
-## Widgets
-[[widgets.homepage]]
-type = "search"
+[article]  # 文章配置
+headingAnchor = false  # 是否为文章标题生成锚点链接
+math = true  # 是否启用数学公式支持
+readingTime = true  # 是否显示阅读时间
 
-[[widgets.homepage]]
-type = "archives"
+[article.license]  # 文章许可证配置
+enabled = true  # 是否启用许可证
+default = "Licensed under CC BY-NC-SA 4.0"  # 默认的许可证文本
 
-[widgets.homepage.params]
-limit = 5
+## 小部件配置
+[[widgets.homepage]]  # 小部件在主页的配置
+type = "search"  # 小部件类型，设置为搜索框
 
-[[widgets.homepage]]
-type = "categories"
+[[widgets.homepage]]  # 另一个小部件配置
+type = "archives"  # 小部件类型，设置为存档列表
 
-[widgets.homepage.params]
-limit = 10
+[widgets.homepage.params]  # 配置主页小部件的参数
+limit = 5  # 主页小部件显示的项目数量限制
 
-[[widgets.homepage]]
-type = "tag-cloud"
+[[widgets.homepage]]  # 另一个主页小部件的开始
+type = "categories"  # 小部件类型为分类
 
-[widgets.homepage.params]
-limit = 10
+[widgets.homepage.params]  # 配置主页小部件的参数
+limit = 10  # 主页小部件显示的项目数量限制
 
-[[widgets.page]]
-type = "toc"
+[[widgets.homepage]]  # 另一个主页小部件的开始
+type = "tag-cloud"  # 小部件类型为标签云
 
-[opengraph.twitter]
-site = ""
-card = "summary_large_image"
+[widgets.homepage.params]  # 配置主页小部件的参数
+limit = 10  # 主页小部件显示的项目数量限制
 
-[defaultImage.opengraph]
-enabled = false
-local = false
-src = ""
+[[widgets.page]]  # 页面小部件的开始
+type = "toc"  # 小部件类型为目录
 
-[colorScheme]
-toggle = true
-default = "auto"
+[opengraph.twitter]  # OpenGraph 配置，专门用于 Twitter
+site = ""  # Twitter 上的站点信息
+card = "summary_large_image"  # 设置卡片样式为大型图片摘要
 
-[imageProcessing.cover]
-enabled = true
+[defaultImage.opengraph]  # 默认 OpenGraph 图像配置
+enabled = false  # 是否启用默认图像
+local = false  # 是否使用本地图像
+src = ""  # 默认图像的路径
 
-[imageProcessing.content]
-enabled = true
+[colorScheme]  # 颜色主题配置
+toggle = true  # 是否启用主题切换功能
+default = "auto"  # 默认主题设置为自动
 
-## Comments
-[comments]
-enabled = true
-provider = "disqus"
+[imageProcessing.cover]  # 封面图像处理配置
+enabled = true  # 是否启用封面图像处理功能
 
-[comments.disqusjs]
-shortname = ""
-apiUrl = ""
-apiKey = ""
-admin = ""
-adminLabel = ""
+[imageProcessing.content]  # 内容图像处理配置
+enabled = true  # 是否启用内容图像处理功能
 
-[comments.utterances]
-repo = ""
-issueTerm = "pathname"
-label = ""
+## 评论配置
+[comments]  # 评论系统的主配置
+enabled = true  # 是否启用评论功能
+provider = "disqus"  # 使用的评论服务提供商为 Disqus
 
-[comments.remark42]
-host = ""
-site = ""
-locale = ""
+[comments.disqusjs]  # Disqus 评论配置
+shortname = ""  # Disqus 短名称
+apiUrl = ""  # API URL
+apiKey = ""  # API 密钥
+admin = ""  # 管理员信息
+adminLabel = ""  # 管理员标签信息
 
-[comments.vssue]
-platform = ""
-owner = ""
-repo = ""
-clientId = ""
-clientSecret = ""
-autoCreateIssue = false
+[comments.utterances]  # Utterances 评论配置
+repo = ""  # GitHub 仓库信息
+issueTerm = "pathname"  # 用于创建评论的议题条件
+label = ""  # 标签信息
 
-[comments.waline]
-serverURL = ""
-lang = ""
-visitor = ""
-avatar = ""
-emoji = ["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"]
-requiredMeta = ["name", "email", "url"]
-placeholder = ""
+[comments.remark42]  # Remark42 评论配置
+host = ""  # 服务器主机地址
+site = ""  # 站点信息
+locale = ""  # 语言环境
 
-[comments.waline.locale]
-admin = "Admin"
+[comments.vssue]  # Vssue 评论配置
+platform = ""  # 平台信息
+owner = ""  # GitHub 账户所有者
+repo = ""  # GitHub 仓库信息
+clientId = ""  # 客户端 ID
+clientSecret = ""  # 客户端密钥
+autoCreateIssue = false  # 是否自动创建议题
 
-[comments.twikoo]
-envId = ""
-region = ""
-path = ""
-lang = ""
+[comments.waline]  # Waline 评论配置
+serverURL = ""  # Waline 服务器地址
+lang = ""  # 语言设置
+visitor = ""  # 访客配置
+avatar = ""  # 用户头像配置
+emoji = ["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"]  # 表情图标列表
+requiredMeta = ["name", "email", "url"]  # 必填的元数据
+placeholder = ""  # 输入框的占位符文本
 
-[comments.cactus]
-defaultHomeserverUrl = "https://matrix.cactus.chat:8448"
-serverName = "cactus.chat"
-siteName = ""
+[comments.waline.locale]  # Waline 评论本地化配置
+admin = "Admin"  # 管理员标签
 
-[comments.giscus]
-repo = ""
-repoID = ""
-category = ""
-categoryID = ""
-mapping = ""
-lightTheme = ""
-darkTheme = ""
-reactionsEnabled = 1
-emitMetadata = 0
+[comments.twikoo]  # Twikoo 评论配置
+envId = ""  # 环境 ID
+region = ""  # 区域信息
+path = ""  # 路径设置
+lang = ""  # 语言设置
 
-[comments.gitalk]
-owner = ""
-admin = ""
-repo = ""
-clientID = ""
-clientSecret = ""
+[comments.cactus]  # Cactus 评论配置
+defaultHomeserverUrl = "https://matrix.cactus.chat:8448"  # 默认的 Homeserver URL
+serverName = "cactus.chat"  # 服务器名称
+siteName = ""  # 网站名称
 
-[comments.cusdis]
-host = ""
-id = ""
+[comments.giscus]  # Giscus 评论配置
+repo = ""  # GitHub 仓库信息
+repoID = ""  # 仓库 ID
+category = ""  # 分类信息
+categoryID = ""  # 分类 ID
+mapping = ""  # 映射信息
+lightTheme = ""  # 浅色主题
+darkTheme = ""  # 深色主题
+reactionsEnabled = 1  # 是否启用反应功能
+emitMetadata = 0  # 是否发送元数据
+
+[comments.gitalk]  # Gitalk 评论配置
+owner = ""  # GitHub 账户所有者
+admin = ""  # 管理员信息
+repo = ""  # GitHub 仓库信息
+clientID = ""  # 客户端 ID
+clientSecret = ""  # 客户端密钥
+
+[comments.cusdis]  # Cusdis 评论配置
+host = ""  # Cusdis 服务器地址
+id = ""  # 评论标识符
